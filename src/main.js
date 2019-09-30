@@ -1,8 +1,16 @@
-import Vue from 'vue'
-import App from './App.vue'
+import panZoom from 'panzoom';
+import PanZoomComponent from './components/pan-zoom/component.vue';
 
-Vue.config.productionTip = false
+const PanZoomPlugin = {
+    install(Vue, options) {
+        var _name = options && options.componentName ? options.componentName : PanZoomComponent.name;
+        Vue.component(_name, PanZoomComponent);
+        Vue.prototype.$panZoom = panZoom;
+    }
+};
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+export default PanZoomPlugin;
+
+if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.use(PanZoomPlugin);
+}

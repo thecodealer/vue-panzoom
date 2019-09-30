@@ -1,19 +1,50 @@
 {
-  "name": "vue-zoom",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue-panzoom",
+  "version": "1.0.1",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-panzoom.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-panzoom.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-panzoom.min.js",
+    "build:all": "npm run build:umd && npm run build:es && npm run build:unpkg"
   },
   "dependencies": {
+    "panzoom": "^7.1.2",
     "vue": "^2.5.21"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",
     "@vue/cli-service": "^3.3.0",
     "node-sass": "^4.9.0",
+    "rollup": "^1.22.0",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-vue": "^5.0.1",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.21"
-  }
+  },
+  "description": "Vue plugin to zoom/pan dom elements",
+  "main": "dist/vue-panzoom.umd.js",
+  "module": "dist/vue-panzoom.esm.js",
+  "unpkg": "dist/vue-panzoom.min.js",
+  "browser": {
+    "./sfc": "src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mistabiggx/vue-panzoom.git"
+  },
+  "keywords": [
+    "vue",
+    "zoom",
+    "pan"
+  ],
+  "author": "Isa Frimpong <mistabiggx@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mistabiggx/vue-panzoom/issues"
+  },
+  "homepage": "https://github.com/mistabiggx/vue-panzoom#readme"
 }
