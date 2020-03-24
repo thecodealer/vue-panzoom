@@ -80,6 +80,15 @@ var PanZoomComponent = {
             this.$panZoomInstance.on('transform', function (e) {
                 this$1.$emit('transform', e);
             });
+        },
+        isPaused: function isPaused() {
+            this.$panZoomInstance.isPaused();
+        },
+        pause: function pause() {
+            this.$panZoomInstance.pause();
+        },
+        resume: function resume() {
+            this.$panZoomInstance.resume();
         }
     }
 };
