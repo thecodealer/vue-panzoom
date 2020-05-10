@@ -80,9 +80,13 @@ var PanZoomComponent = {
             this.$panZoomInstance.on('transform', function (e) {
                 this$1.$emit('transform', e);
             });
+
+            this.$panZoomInstance.on('zoomend', function (e) {
+                this$1.$emit('zoomend', e);
+            });
         },
         isPaused: function isPaused() {
-            this.$panZoomInstance.isPaused();
+            return this.$panZoomInstance.isPaused();
         },
         pause: function pause() {
             this.$panZoomInstance.pause();
@@ -210,23 +214,27 @@ __vue_render__._withStripped = true;
   
   /* style inject SSR */
   
+  /* style inject shadow dom */
+  
 
   
-  var PanZoomComponent$1 = normalizeComponent_1(
+  var __vue_component__ = normalizeComponent_1(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
     __vue_scope_id__,
     __vue_is_functional_template__,
     __vue_module_identifier__,
+    false,
+    undefined,
     undefined,
     undefined
   );
 
 var PanZoomPlugin = {
     install: function install(Vue, options) {
-        var _name = options && options.componentName ? options.componentName : PanZoomComponent$1.name;
-        Vue.component(_name, PanZoomComponent$1);
+        var _name = options && options.componentName ? options.componentName : __vue_component__.name;
+        Vue.component(_name, __vue_component__);
         Vue.prototype.$panZoom = panZoom;
     }
 };
