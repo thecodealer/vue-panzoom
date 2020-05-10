@@ -11,8 +11,7 @@
     "build:all": "npm run build:umd && npm run build:es && npm run build:unpkg"
   },
   "dependencies": {
-    "panzoom": "^9.2.1",
-    "vue": "^2.5.21"
+    "panzoom": "^9.2.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",

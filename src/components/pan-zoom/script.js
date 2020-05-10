@@ -76,9 +76,13 @@ const PanZoomComponent = {
             this.$panZoomInstance.on('transform', (e) => {
                 this.$emit('transform', e);
             });
+
+            this.$panZoomInstance.on('zoomend', (e) => {
+                this.$emit('zoomend', e);
+            });
         },
         isPaused() {
-            this.$panZoomInstance.isPaused();
+            return this.$panZoomInstance.isPaused();
         },
         pause() {
             this.$panZoomInstance.pause();
