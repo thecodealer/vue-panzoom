@@ -33,17 +33,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mistabiggx/vue-panzoom.git"
+    "url": "git+https://github.com/thecodealer/vue-panzoom.git"
   },
   "keywords": [
     "vue",
     "zoom",
     "pan"
   ],
-  "author": "Isa Frimpong <mistabiggx@gmail.com>",
+  "author": "Isa Frimpong <thecodealer@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mistabiggx/vue-panzoom/issues"
+    "url": "https://github.com/thecodealer/vue-panzoom/issues"
   },
-  "homepage": "https://github.com/mistabiggx/vue-panzoom#readme"
+  "homepage": "https://github.com/thecodealer/vue-panzoom#readme"
 }
