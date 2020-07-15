@@ -1,6 +1,6 @@
 {
   "name": "vue-panzoom",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -15,14 +15,15 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-service": "^3.3.0",
+    "@vue/cli-service": "^4.4.6",
     "node-sass": "^4.13.1",
     "rollup": "^1.22.0",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-vue": "^5.0.1",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "websocket-extensions": ">=0.1.4"
   },
   "description": "Vue plugin to zoom/pan dom elements",
   "main": "dist/vue-panzoom.umd.js",
