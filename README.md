@@ -72,7 +72,7 @@ new Vue({
 
 If you wish to change the name of the vue component from the default panZoom, you pass an option to the plugin like so:
 ``` js
-Vue.use(panZoom, {compoentName: 'yourPanZoom'});
+Vue.use(panZoom, {componentName: 'yourPanZoom'});
 ```
 
 and then use in your vue template like so:
