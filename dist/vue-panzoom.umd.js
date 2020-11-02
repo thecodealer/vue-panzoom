@@ -17,9 +17,12 @@
                 $panZoomInstance: null,
                 instanceId: null,
                 defaultOptions: {
+                    autocenter: true,
                     bounds: true,
-                    minZoom: 0.5,
-                    maxZoom: 2,
+                    transformOrigin: {
+                        x: 0.5,
+                        y: 0.5,
+                    }
                 }
             }
         },
