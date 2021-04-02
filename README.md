@@ -122,3 +122,9 @@ This event is fired when the vue-panzoom instance has been initialized successfu
 
 ## [panzoom](https://github.com/anvaka/panzoom) events
 All events supported by [panzoom](https://github.com/anvaka/panzoom) are also supported here.
+
+## upgrading from 1.1.3 to 1.1.4
+Version 1.1.4 uses `"rollup-plugin-vue": "^6.0.0"`, which requires Vue 3. For projects using Vue 2, downgrade to 1.1.3, e.g.:
+```sh
+npm install vue-panzoom@1.1.3
+```
