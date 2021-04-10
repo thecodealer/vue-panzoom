@@ -122,10 +122,15 @@
     PanZoomComponent.__file = "src/components/pan-zoom/component.vue";
 
     var PanZoomPlugin = {
-        install: function install(Vue, options) {
+        install: function install(app, options) {
             var _name = options && options.componentName ? options.componentName : PanZoomComponent.name;
-            Vue.component(_name, PanZoomComponent);
-            Vue.prototype.$panZoom = panZoom;
+            app.component(_name, PanZoomComponent);
+            if (app.hasOwnProperty('config') && app.config.hasOwnProperty('globalProperties')) {
+                app.config.globalProperties.$panZoom = panZoom;
+            }
+            else {
+                app.prototype.$panZoom = panZoom;
+            }
         }
     };
 
