@@ -39,7 +39,10 @@ const PanZoomComponent = {
             else {
                 el = _wrapper.querySelector('svg, object, embed');
                 if (!el) {
-                    el = _wrapper.firstChild;
+                  for(let i = 0; i < _wrapper.childNodes.length; i++){
+                    if(_wrapper.childNodes[i].nodeName !== '#text')
+                      el = _wrapper.childNodes[i]
+                  }
                 }
             }
             return el;
